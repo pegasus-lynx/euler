@@ -27,7 +27,7 @@ class PrimeIterator:
 
 
 def is_prime(x):
-    if x<1:
+    if x<=1:
         return False
         
     for p in range(2, int(math.sqrt(x))+1):

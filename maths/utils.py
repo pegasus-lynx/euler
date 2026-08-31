@@ -27,3 +27,14 @@ def word_to_num(word):
     for c in word:
         ret += 1 + ord(c) - ord('A')
     return ret
+
+def is_palindrome(x):
+    digs = get_digits(x)
+    p = 0
+    q = len(digs)-1
+    while p < q:
+        if digs[p] != digs[q]:
+            return False
+        p += 1
+        q -= 1
+    return True
