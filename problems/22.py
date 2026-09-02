@@ -1,9 +1,9 @@
 import csv
-from pathlib import Path
+from common.paths import get_data_path
 from maths.utils import word_to_num
 
 
-DATA_FILE = Path(__file__).resolve().parent.parent / "data" / "0022_names.txt"
+DATA_FILE = get_data_path("0022_names.txt")
 with DATA_FILE.open(encoding="utf-8", newline="") as file:
 	names = next(csv.reader(file))
 
